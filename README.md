@@ -19,7 +19,6 @@ Mongoose - Para conexão com o banco de dados não relacional.
 jsonwebtoken - Para utilização de autenticação com JWT.
 
 **Sistemas utilizados para deploy**
-Heroku - Para dar deploy na aplicação de forma simples e gratuita.
 Atlas - Para a utilização do MongoDB de forma gratuita.
 
 **Organização da aplicação**

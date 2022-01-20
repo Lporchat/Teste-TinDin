@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "start": "tsnd --ignore-watch node_modules --transpile-only --respawn src/server.ts"
+    "dev": "tsnd --ignore-watch node_modules --transpile-only --respawn src/server.ts"
   },
   "dependencies": {
     "dotenv": "^14.2.0",
