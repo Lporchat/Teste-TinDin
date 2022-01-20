@@ -13,7 +13,7 @@ const userLoginController = new UserLoginController()
 const userRoutes = Router()
 
 
-userRoutes.post('/create', ensureAuthenticated, userCreateController.handle);
+userRoutes.post('/create', userCreateController.handle);
 
 userRoutes.get('/login', userLoginController.handle);
 

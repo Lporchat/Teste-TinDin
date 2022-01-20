@@ -7,10 +7,10 @@ class ListClassesAllController {
 
     async handle(req: Request, res: Response): Promise<Response> {
 
-        const { name, description, data_init, data_end } = req.body;
+        const { name, description, data_init, data_end, page } = req.body;
 
 
-        const allClasses = await findAll(name, description, data_init, data_end);
+        const allClasses = await findAll(name, description, data_init, data_end, page);
 
 
 

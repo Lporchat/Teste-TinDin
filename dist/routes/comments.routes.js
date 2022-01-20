@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.commentRoutes = void 0;
+const express_1 = require("express");
+const ensureAuthenticate_1 = require("../middleware/ensureAuthenticate");
+const createComment_1 = require("../modules/comments/usecase/createComment");
+const deleteComment_1 = require("../modules/comments/usecase/deleteComment");
+const listCommentsForClasses_1 = require("../modules/comments/usecase/listCommentsForClasses");
+const commentCreateController = new createComment_1.CommentCreateController();
+const commentListForClassesController = new listCommentsForClasses_1.CommentListForClassesController();
+const commentDeleteController = new deleteComment_1.CommentDeleteController();
+const commentRoutes = (0, express_1.Router)();
+exports.commentRoutes = commentRoutes;
+commentRoutes.post('/', ensureAuthenticate_1.ensureAuthenticated, commentCreateController.handle);
+commentRoutes.get('/:id', ensureAuthenticate_1.ensureAuthenticated, commentListForClassesController.handle);
+commentRoutes.delete('/:id', ensureAuthenticate_1.ensureAuthenticated, commentDeleteController.handle);
